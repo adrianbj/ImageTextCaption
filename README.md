@@ -1,7 +1,7 @@
 ImageTextCaption
 ================
 
-ProcessWire module for automatically creating image captions from the image description field and displayed when an image is inserted in a RTE field. 
+ProcessWire module for automatically creating image captions from the image description field and displayed when an image is inserted in a RTE field.
 
 
 ##Usage
@@ -16,3 +16,6 @@ Download and place the module folder named "ImageTextCaption" in: /site/modules/
 In the admin control panel, go to Modules. At the bottom of the screen, click the "Check for New Modules" button.
 
 Now scroll to the ImageTextCaption module and click "Install".
+
+##Support and Info
+http://processwire.com/talk/topic/1344-captions-for-images-in-tinymce/?p=40246
