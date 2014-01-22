@@ -500,12 +500,20 @@ class ImageTextCaption extends WireData implements Module {
                   $imageName = preg_replace("/\d+x\d+\./i","", $variationName);
 
                   // All image fields of the page
-                  $imageFields = $p->fields->find("type=FieldtypeImage");
+                  $imageFields = $p->fields->find("type=FieldtypeImage|FieldtypeCropImage");
                   // find the image object
                   foreach($imageFields as $imageField) {
-                    $imageitem = $p->$imageField->get($imageName);
+
+                    if($imageField->maxFiles == 1) {
+                      $imageitem = $p->$imageField;
+                    }
+                    else {
+                      $imageitem = $p->$imageField->get("$imageName");
+                    }
+
                     $image_description = $imageitem->description;
 
+                    //if($imageField->type=="FieldtypeImage" || $imageField->type=="FieldtypeCropImage") break;
                     if($imageitem instanceof Pageimage) break;
 
                   }
