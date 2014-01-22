@@ -29,7 +29,7 @@ class ImageTextCaption extends WireData implements Module {
         return array(
 
             'title' => 'Image Caption',
-            'version' => 103,
+            'version' => 104,
             'summary' => 'A module to convert image descriptions to captions when embedded in body RTE fields.',
             'href' => 'http://www.processwire.com',
             'singular' => true,
