@@ -505,10 +505,10 @@ class ImageTextCaption extends WireData implements Module {
                   foreach($imageFields as $imageField) {
 
                     if($imageField->maxFiles == 1) {
-                      $imageitem = $p->$imageField;
+                      $imageitem = $p->{$imageField};
                     }
                     else {
-                      $imageitem = $p->$imageField->get("$imageName");
+                      $imageitem = $p->{$imageField}->get("$imageName");
                     }
 
                     $image_description = $imageitem->description;
